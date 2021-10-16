@@ -3,7 +3,6 @@ body {
     margin: 0;
     text-align: center;
     font-family: 'Merriweather', serif;
-    background-color: #dfebe9;
 
 }
 
@@ -37,7 +36,6 @@ hr{
    border-bottom: none;
    width: 4%;
    margin: 100px auto;
-   
 }
 
 a
@@ -163,6 +161,6 @@ a:hover{
   }
   .copyright{
 color: #EAF6F6;
-font-size: 0.95rem;
+font-size: 0.75rem;
 padding: 20px 0;
   }
