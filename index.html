@@ -16,71 +16,144 @@
 </head>
 
 <body>
-  <div class="top-container">
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#top" class="logo">Dev's Portfolio</a>
+
+      <!-- Hamburger / Close Icon -->
+      <div class="menu-toggle" id="menu-toggle">
+        &#9776;
+      </div>
+
+      <!-- Links -->
+      <div class="nav-links" id="nav-links">
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="#footer">Links</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Top Section -->
+  <div id="top" class="top-container">
     <img class="top-cloud" src="images/cloud.png" alt="cloud">
     <h1>Hey I'm Dewanand.</h1>
     <h2>A <span class="Pro">Pro</span>grammer.</h2>
     <img class="bottom-cloud" src="images/cloud.png" alt="cloud">
     <img src="images/mountain.png" alt="mountain">
   </div>
+
+  <!-- Middle Section -->
   <div class="middle-container">
     <div class="profile">
-      <img class="image" src="images/profile.png" alt="profile-img">
+      <img class="image" src="images/profile.png" alt="Profile picture of Dewanand">
       <h2>Hello.</h2>
-      <p class="intro">I am Software Developer❤️..</p>
+      <p class="intro">I am a Software Developer ❤️.</p>
     </div>
+
     <hr>
-    <div class="skills">
+
+    <div id="skills" class="skills">
       <h2>My Skills.</h2>
+
       <div class="skill-row">
-        <img class="skill-developer" src="images/developer.png" alt="skills-img">
+        <img class="skill-developer" src="images/developer.png" alt="Developer Icon">
         <h3>Design & Development</h3>
         <p>Lorem ipsum dolor sit amet, quis in duis, iaculis id felis. Consectetuer vestibulum, nunc urna lectus, erat
           ligula. Hendrerit nam, lectus ante, ut lorem eros.</p>
       </div>
+
       <div class="skill-row">
-        <img class="skill-java" src="images/java.png" alt="Java">
+        <img class="skill-java" src="images/java.png" alt="Java Logo">
         <h3>Java</h3>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid aliquam nemo vel. Ea, unde eos. Reprehenderit dolore ab soluta cupiditate, voluptatum, sit corrupti a veritatis facere beatae laboriosam eveniet delectus.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid aliquam nemo vel. Ea, unde eos.
+          Reprehenderit dolore ab soluta cupiditate, voluptatum, sit corrupti a veritatis facere beatae laboriosam
+          eveniet delectus.</p>
       </div>
+
       <div class="skill-row">
-        <img class="skill-html" src="images/html.png" alt="html img">
+        <img class="skill-html" src="images/html.png" alt="HTML Icon">
         <h3>HTML</h3>
         <p>Lorem ipsum dolor sit amet, mauris sed consectetuer. Etiam et eu, bibendum interdum, lacus quis mauris.
           Curabitur wisi, quisque vel eu, rutrum nam.</p>
       </div>
+
       <div class="skill-row">
-        <img class="skill-css" src="images/css.png" alt="css">
+        <img class="skill-css" src="images/css.png" alt="CSS Icon">
         <h3>CSS</h3>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          Ratione eveniet qui quaerat atque veritatis, recusandae voluptate. Optio labore fugiat mollitia voluptatibus.</p>
+          Ratione eveniet qui quaerat atque veritatis, recusandae voluptate. Optio labore fugiat mollitia voluptatibus.
+        </p>
       </div>
+
       <div class="skill-row">
-        <img class="skill-javascript" src="images/java-script.png" alt="JavaScript">
+        <img class="skill-javascript" src="images/java-script.png" alt="JavaScript Icon">
         <h3>JavaScript</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eveniet perspiciatis quae vitae officia nemo sapiente eaque cupiditate, nesciunt exercitationem distinctio at repellendus, non iure cum.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque eveniet perspiciatis quae vitae officia nemo
+          sapiente eaque cupiditate, nesciunt exercitationem distinctio at repellendus, non iure cum.</p>
       </div>
     </div>
+
     <hr>
-    <div class="contact-me">
+
+    <div id="contact" class="contact-me">
       <h2>Get In Touch</h2>
       <h3>Lorem ipsum dolor sit amet, non elit.</h3>
-      <p class="contact-message">Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui, ornare erat.</p>
-      <a class="btn" href="mailto:dewanandkhilar@gmail.com">CONTACT ME📫</a>
+      <p class="contact-message">Lorem ipsum dolor sit amet, in quis, aenean amet. Phasellus sodales, tellus donec dui,
+        ornare erat.</p>
+      <a class="btn" href="mailto:dewanandkhilar@gmail.com">CONTACT ME 📫</a>
     </div>
   </div>
 
-
-  <div class="bottom-container">
+  <!-- Footer -->
+  <div id="footer" class="bottom-container">
     <a class="footer-link" href="https://www.linkedin.com/in/dewanand-khilar-2b96b2200/">LinkedIn</a>
     <a class="footer-link" href="https://github.com/Dewanand7">GitHub</a>
     <a class="footer-link" href="https://twitter.com/nitishkhilar">Twitter</a>
     <a class="footer-link" href="https://devkhilar.blogspot.com/">Website</a>
     <a class="footer-link" href="https://www.dropbox.com/s/">Resume</a>
-    <p class="copyright">©2021 Dewanand khilar.</p>
+    <p class="copyright">©2021 Dewanand Khilar.</p>
   </div>
 
+  <!-- JavaScript -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const links = navLinks.querySelectorAll('a');
+    const navbar = document.querySelector('.navbar');
 
+    // Toggle open/close on hamburger click
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+
+      if (navLinks.classList.contains('show')) {
+        menuToggle.innerHTML = '&times;';
+      } else {
+        menuToggle.innerHTML = '&#9776;';
+      }
+    });
+
+    // Close menu when a nav link is clicked
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.classList.remove('active');
+        menuToggle.innerHTML = '&#9776;';
+      });
+    });
+
+    // Hide/Show navbar on scroll
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY) {
+        navbar.classList.add('hidden');   // scrolling down -> hide
+      } else {
+        navbar.classList.remove('hidden'); // scrolling up -> show
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
 </body>
-
 </html>
